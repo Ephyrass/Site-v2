@@ -23,8 +23,7 @@ const Menu = () => {
 
   return (
     <div>
-      <h2 className={`logo`}>Cygnus</h2>
-
+      <h2 className="logo">Cygnus</h2>
       <div
         className={menuBurger}
         id={active ? "is-active" : ""}
@@ -40,6 +39,7 @@ const Menu = () => {
                   display: "block",
                   position: "relative",
                   top: "20%",
+                  left: "7%",
                 }
               : {
                   display: "none",
@@ -52,7 +52,10 @@ const Menu = () => {
           <Link to="about" spy={true} smooth={true} duration={1000}>
             <p> À propos </p>
           </Link>
-          <p> Nos projets </p>
+          <Link to="portfolio" spy={true} smooth={true} duration={1000}>
+            <p> Nos projets </p>
+          </Link>
+
           <Link to="contact" spy={true} smooth={true} duration={1000}>
             <p> Contact </p>
           </Link>

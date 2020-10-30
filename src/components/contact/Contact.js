@@ -15,47 +15,47 @@ export default class Contact extends React.Component {
     const { status } = this.state
     return (
       <div className="contact">
-        <h2>CONTACT</h2>
-        <hr
-          style={{
-            width: "15%",
-            position: "relative",
-            top: "-25px",
-            height: "3px",
-            border: "none",
-          }}
-        />
+        <div>
+          <h2>Nous contacter.</h2>
+        </div>
 
-        <ScrollAnimation animateIn="zoomIn" duration="0.7" animateOnce={true}>
-          <form
-            onSubmit={this.submitForm}
-            action="https://formspree.io/xgeazpen"
-            method="POST"
-          >
-            <label>Nom et Prénom:</label>
-            <input className="name" type="text" name="name" />
-            <label>Email:</label>
-            <input className="email" type="email" name="email" />
-            <label>Sujet:</label>
-            <input className="topic" type="text" name="topic" />
-            <label>Message:</label>
-            <textarea className="message" type="text" name="message" placeholder="ajouter votre message"/>
-            {status === "SUCCESS" ? (
-              <p>Votre message à été envoyé!</p>
-            ) : (
-              <button>Envoyer</button>
-            )}
-            {status === "ERROR" && (
-              <p class="error">
-                Oups! Votre message n'a pas été envoyé, vous devez remplir tout
-                les champs.
-                {alert(
-                  "Oups! Votre message n'a pas été envoyé, vous devez remplir tout les champs"
-                )}
-              </p>
-            )}
-          </form>
-        </ScrollAnimation>
+        <div>
+          <ScrollAnimation animateIn="zoomIn" duration="0.7" animateOnce={true}>
+            <form
+              onSubmit={this.submitForm}
+              action="https://formspree.io/xgeazpen"
+              method="POST"
+            >
+              <label>Nom et Prénom:</label>
+              <input className="name" type="text" name="name" />
+              <label>Email:</label>
+              <input className="email" type="email" name="email" />
+              <label>Sujet:</label>
+              <input className="topic" type="text" name="topic" />
+              <label>Message:</label>
+              <textarea
+                className="message"
+                type="text"
+                name="message"
+                placeholder="ajouter votre message"
+              />
+              {status === "SUCCESS" ? (
+                <p>Votre message à été envoyé!</p>
+              ) : (
+                <button>Envoyer</button>
+              )}
+              {status === "ERROR" && (
+                <p class="error">
+                  Oups! Votre message n'a pas été envoyé, vous devez remplir
+                  tout les champs.
+                  {alert(
+                    "Oups! Votre message n'a pas été envoyé, vous devez remplir tout les champs"
+                  )}
+                </p>
+              )}
+            </form>
+          </ScrollAnimation>
+        </div>
       </div>
     )
   }
