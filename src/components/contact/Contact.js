@@ -15,8 +15,31 @@ export default class Contact extends React.Component {
     const { status } = this.state
     return (
       <div className="contact">
-        <div>
-          <h2>Nous contacter.</h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            alignSelf: "center",
+            flexDirection: "column",
+          }}
+        >
+          <h2>
+            Un devis ? <br />
+            Une question ? <br />
+            Contactez-Nous.
+          </h2>
+
+          <div className="phone">
+            <p>
+              <strong>Par téléphone:</strong> <br />
+            </p>
+            06.37.61.89.45 <br />
+            06.88.73.85.73
+            <br />
+            <br />
+            <strong>Par mail:</strong> <br />
+            <p>Cygnus.developpement@gmail.com</p>
+          </div>
         </div>
 
         <div>

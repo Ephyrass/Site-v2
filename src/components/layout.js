@@ -9,10 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import "./layout.css"
+import Header from "./home/Header"
 
 const Layout = ({ children }) => {
   return (
     <>
+      <Header />
       <div>
         <main>{children}</main>
         <footer>© {new Date().getFullYear()}, Built with love</footer>

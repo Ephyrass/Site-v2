@@ -7,7 +7,6 @@ import ReactTypingEffect from "react-typing-effect"
 const Home = () => {
   return (
     <div className="home">
-      <Header />
       <div className="title">
         <h1>
           Création et refonte{" "}
@@ -15,8 +14,10 @@ const Home = () => {
             <ReactTypingEffect
               text={[
                 "de sites vitrines.",
-                "d'applications.",
                 "de sites E-commerces",
+                "d'applications.",
+                "de design",
+                "de SEO",
               ]}
               speed={70}
               eraseSpeed={70}

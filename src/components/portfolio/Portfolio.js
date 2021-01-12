@@ -4,12 +4,39 @@ import PortfolioItem from "./PortfolioItem"
 
 import webagency from "../../images/webAgenc.png"
 import webagencyResponsive from "../../images/webAgencyResponsive.png"
+import DevCo from "../../images/DevCo.png"
+import DevCoRes from "../../images/DevCoRes.png"
 
 const Portfolio = () => {
+  const items = [
+    {
+      image1: webagency,
+      image2: webagencyResponsive,
+      title: "WebAgency",
+      subTitle: "Site vitrine",
+      way: 0,
+    },
+    {
+      image1: DevCo,
+      image2: DevCoRes,
+      title: "DevConnector",
+      subTitle: "Application",
+      way: 1,
+    },
+    {
+      image1: DevCo,
+      image2: DevCoRes,
+      title: "Shop Chop",
+      subTitle: "E-Commerce",
+      way: 0,
+    },
+  ]
+
   return (
     <div className="portfolio">
-      <PortfolioItem bgImage={webagency} bgImage2={webagencyResponsive} />
-
+      {items.map(item => (
+        <PortfolioItem item={item} />
+      ))}
       <div>
         <svg
           className="wave"

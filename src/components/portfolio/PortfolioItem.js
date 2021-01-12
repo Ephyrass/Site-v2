@@ -1,30 +1,45 @@
 import React from "react"
 
-function PortfolioItem({ bgImage, bgImage2 }) {
+function PortfolioItem({ item }) {
   return (
     <>
       <div className="portfolio-item">
-        <div className="left">
+        <div className={item.way === 0 ? "pair-left" : "pair-right"}>
           <figure
             className="image-responsive"
-            style={{
-              background: `url(${bgImage2})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
+            style={
+              item.way === 0
+                ? {
+                    background: `url(${item.image2})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }
+                : {
+                    background: `url(${item.image1})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }
+            }
           ></figure>
         </div>
         <div className="middle">
-          <p className="title-portfolio">WebAgency</p>
-          <p className="subtitle">Site Vitrine</p>
+          <p className="title-portfolio">{item.title}</p>
+          <p className="subtitle">{item.subTitle}</p>
         </div>
-        <div className="right">
+        <div className={item.way === 0 ? "pair-right" : "pair-left"}>
           <figure
             className="image-monitor"
-            style={{
-              background: `url(${bgImage})`,
-              backgroundSize: "cover",
-            }}
+            style={
+              item.way === 0
+                ? {
+                    background: `url(${item.image1})`,
+                    backgroundSize: "cover",
+                  }
+                : {
+                    background: `url(${item.image2})`,
+                    backgroundSize: "cover",
+                  }
+            }
           ></figure>
         </div>
       </div>

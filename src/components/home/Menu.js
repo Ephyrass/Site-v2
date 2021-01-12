@@ -7,8 +7,6 @@ const Menu = () => {
   const [menuBurger, setMenuBurger] = useState("menu-burger")
   const [nav, setNav] = useState("")
 
-  console.log(menuBurger)
-
   const setMenu = () => {
     if (!active) {
       setActive(true)
