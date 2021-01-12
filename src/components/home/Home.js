@@ -1,5 +1,4 @@
 import React from "react"
-import Header from "./Header"
 import arrow from "../../images/arrow.svg"
 import { Link, animateScroll as scroll } from "react-scroll"
 import ReactTypingEffect from "react-typing-effect"

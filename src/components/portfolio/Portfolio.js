@@ -1,7 +1,5 @@
 import React from "react"
-
 import PortfolioItem from "./PortfolioItem"
-
 import webagency from "../../images/webAgenc.png"
 import webagencyResponsive from "../../images/webAgencyResponsive.png"
 import DevCo from "../../images/DevCo.png"
