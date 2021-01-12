@@ -13,6 +13,7 @@ const IndexPage = () => (
     <About />
     <Portfolio />
     <Contact />
+    <footer>© {new Date().getFullYear()}, Built with love</footer>
   </Layout>
 )
 
